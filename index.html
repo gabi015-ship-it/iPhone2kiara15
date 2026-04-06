@@ -1,0 +1,173 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Mis 15 Años</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="contenedor-principal">
+    <div id="inicio" class="pantalla activa">
+      <video id="videoIntro" class="video-fondo" playsinline preload="auto">
+        <source src="video/intro.mp4" type="video/mp4">
+      </video>
+      <div id="mensaje">Toca el centro para comenzar</div>
+    </div>
+
+    <div id="elegante" class="pantalla">
+      <video id="videoFondoInvitacion" class="video-fondo-loop" playsinline loop muted preload="auto">
+        <source src="video/fondo-invitacion.mp4" type="video/mp4">
+      </video>
+
+      <div class="scroll-container">
+        
+        <section class="seccion-info">
+          <h1 class="dato-secundario">Con mucha alegría y emoción, te invito a celebrar un momento único en mi vida…</h1>
+          <p class="titulo-grande">Mis 15 Años</p>
+          <p class="dato-secundario">Será una noche llena de magia, sueños y momentos inolvidables, y me encantaría que formes parte de ella.</p>
+          
+          <!-- REPRODUCTOR EN LA PARTE SUPERIOR -->
+          <div class="player-wrapper">
+            <div class="player">
+              <audio id="audio" preload="auto">
+                <source src="audio/cancion.mp3" type="audio/mp3">
+              </audio>
+
+              <div class="controls">
+                <button id="prev" class="control-btn">⏮</button>
+                <button id="play" class="control-btn">▶</button>
+                <button id="next" class="control-btn">⏭</button>
+                <div class="volume-container">
+                  <button id="volumeIcon" class="volume-btn control-btn">🔊</button>
+                  <div class="volume-slider-container" id="volumeSliderContainer">
+                    <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="0.7" orient="vertical">
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress-container">
+                <div id="progress"></div>
+              </div>
+
+              <div class="time">
+                <span id="current">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-indicador">↓ Desliza para descubrir más ↓</div>
+        </section>
+
+        <!-- SECCIÓN DE LA MISA CON CONTADOR -->
+        <section class="seccion-info seccion-misa">
+          <div class="contador-wrapper">
+            <div class="tiempo">
+              <div class="bloque">
+                <div class="numero" id="diasMisa">00</div>
+                <div class="label">DÍAS</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="horasMisa">00</div>
+                <div class="label">HORAS</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="minutosMisa">00</div>
+                <div class="label">MIN</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="segundosMisa">00</div>
+                <div class="label">SEG</div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="dato-secundario">En el marco de la celebración, tengo el agrado de invitarte a la misa de acción de gracias que se realizará en la Parroquia "San Juan Diego"</h2>
+          <p class="dato-resaltante"><strong>Martes 28 de Abril</strong></p>
+          <p class="dato-resaltante"><strong>20:30hs</strong></p>
+          <p class="titulo-lugares">Barrio Saint Germain</p>
+          <p class="dato-secundario">"Haz clic en el icono para ver ubicación"</p>
+          <a href="https://maps.app.goo.gl/CditvXnB48oiENfi8" target="_blank">
+            <img src="img/ubi.gif" class="gif-mapa" alt="Ver ubicación">
+          </a>
+        </section>
+
+        <!-- SECCIÓN DE LA FIESTA CON CONTADOR -->
+        <section class="seccion-info seccion-fiesta">
+          <div class="contador-wrapper">
+            <div class="tiempo">
+              <div class="bloque">
+                <div class="numero" id="diasFiesta">00</div>
+                <div class="label">DÍAS</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="horasFiesta">00</div>
+                <div class="label">HORAS</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="minutosFiesta">00</div>
+                <div class="label">MIN</div>
+              </div>
+              <div class="bloque">
+                <div class="numero" id="segundosFiesta">00</div>
+                <div class="label">SEG</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="dato-secundario">"Hay momentos que solo son perfectos si se comparten con las personas indicadas. Te espero para vivir juntos la noche mágica de mis 15 años."</p>
+          <h2 class="dato-resaltante">Sábado 9 de Mayo</h2>
+          <p class="dato-resaltante">21:30hs</p>
+          <p class="titulo-lugares">Complejo Deportivo "ATSA"</p>
+          <a href="https://maps.app.goo.gl/DTNcEHaMBRPhkUPMA" target="_blank">
+            <img src="img/ubi2.gif" class="gif-mapa" alt="Ver ubicación">
+          </a>
+        </section>
+
+        <!-- SECCIÓN DRESS CODE -->
+        <section class="seccion-info dress-solo-img">
+          <img src="img/hombre.png" class="img-capa capa1" alt="Hombre dress code">
+          <img src="img/mujer.png" class="img-capa capa2" alt="Mujer dress code">
+          <img src="img/colores.png" class="img-capa capa3" alt="Colores sugeridos">
+          <img src="img/dresscode.png" class="img-capa capa4" alt="Dress code">
+        </section>
+
+        <!-- SECCIÓN OBSEQUIO -->
+        <section class="seccion-info">
+          <img src="img/regalo.gif" class="gif-regalo" alt="Regalo">
+          <p class="dato-secundario">"Nada me hace más feliz que tenerte en mi fiesta.</p>
+          <p class="dato-secundario">Si deseás hacerme un obsequio, lo podés enviar de forma virtual a estos datos."</p>
+
+          <button class="btn-plata" id="btnBancarios">💳 DATOS BANCARIOS</button>
+
+          <div id="datosBancarios" class="datos-bancarios" style="display: none;">
+            <p>🏦 Banco: Mercado Pago</p>
+            <p>📊 CBU: XXXXXXXXXXXXXXXX</p>
+            <p>👤 Titular: Kiara Aylen Ruiz Maldonado</p>
+            <p>📧 Alias: Kiara.aylen28</p>
+          </div>
+        </section>
+
+        <!-- SECCIÓN CONFIRMACIÓN -->
+        <section class="seccion-info">
+          <h2 class="dato-principal">¿Me acompañas?</h2>
+          <h2 class="dato-secundario">Confirma tu asistencia</h2>
+          <div class="botones-finales">
+            <a href="#" id="btnWhatsapp" class="btn-plata">💬 WHATSAPP</a>
+          </div>
+          <p class="dato-secundario mt-20">✨"Tu presencia otorgará un brillo especial a mi celebración. Por favor, confirmá tu asistencia para que podamos celebrar juntos."✨</p>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
