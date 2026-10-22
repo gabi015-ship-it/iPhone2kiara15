@@ -60,7 +60,7 @@ window.onload = function () {
   });
 
   // Prevenir selección de texto en elementos interactivos para Safari
-  const interactiveElements = document.querySelectorAll('button, .btn-plata, .control-btn, .volume-btn, .gif-mapa, .gif-regalo');
+  const interactiveElements = document.querySelectorAll('button, .btn-plata, .control-btn, .volume-btn, .gif-mapa, .gif-regalo, .creditos-redes a, .creditos-qr-img');
   interactiveElements.forEach(el => {
     el.addEventListener('touchstart', (e) => {
       // Prevenir selección de texto en Safari
@@ -372,20 +372,11 @@ window.onload = function () {
     });
   }
 
-  // Botón de WhatsApp
+  // Botón de WhatsApp (Optimizado para Safari iOS: usa el href directo sin bloqueo de pop-ups ni touchstart)
   const btnWhatsapp = document.getElementById("btnWhatsapp");
   if (btnWhatsapp) {
-    const openWhatsApp = (e) => {
-      e.preventDefault();
-      const mensaje = encodeURIComponent("¡Hola! Quiero confirmar mi asistencia a tus 15 años ✨");
-      window.open(`https://wa.me/+5493854354477?text=${mensaje}`, "_blank");
-    };
-    
-    btnWhatsapp.addEventListener("click", openWhatsApp);
-    btnWhatsapp.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      openWhatsApp(e);
-    });
+    const mensaje = encodeURIComponent("¡Hola! Me encantó su invitación web , quiero crear una por favor !");
+    btnWhatsapp.href = `https://wa.me/5493853026369?text=${mensaje}`;
   }
   
   // ========== OPTIMIZACIONES PARA SAFARI ==========
